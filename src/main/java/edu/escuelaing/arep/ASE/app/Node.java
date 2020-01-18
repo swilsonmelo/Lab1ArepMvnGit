@@ -4,10 +4,10 @@ package edu.escuelaing.arep.ASE.app;
 public class Node<T>
 {
     private T element;
-    private Node next;
-    private Node prior;
+    private Node<T> next;
+    private Node<T> prior;
 
-    public Node(T element, Node prior, Node next){
+    public Node(T element, Node<T> prior, Node<T> next){
         this.element = element;
         this.next = next;
         this.prior = prior;
@@ -21,19 +21,19 @@ public class Node<T>
         this.element = element;
     }
 
-    public Node getNext() {
+    public Node<T> getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext(Node<T> next) {
         this.next = next;
     }
 
-    public Node getPrior() {
+    public Node<T> getPrior() {
         return prior;
     }
 
-    public void setPrior(Node prior) {
+    public void setPrior(Node<T> prior) {
         this.prior = prior;
     }
 

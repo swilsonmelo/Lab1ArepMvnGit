@@ -22,20 +22,20 @@ public class LinkedList<T> implements List<T> {
         this.size = 0;
     }
 
-    public LinkedList(final T data) {
+    public LinkedList( T data) {
         this.head = new Node<T>(data, null, null);
         this.tail = new Node<T>(data, null, null);
         this.size = 1;
     }
 
-    public boolean add(final T data) {
+    public boolean add( T data) {
 
         if (size == 0) {
-            final Node<T> addedNode = new Node<T>(data, null, null);
+             Node<T> addedNode = new Node<T>(data, null, null);
             this.head = addedNode;
             this.tail = addedNode;
         } else {
-            final Node<T> addedNode = new Node<T>(data, this.tail, null);
+             Node<T> addedNode = new Node<T>(data, this.tail, null);
             this.tail.setNext(addedNode);
             this.tail = addedNode;
         }
@@ -43,72 +43,77 @@ public class LinkedList<T> implements List<T> {
         return true;
     }
 
-    public void add(final int index, final T element) {
-        final int mid = size / 2;
+    public Node<T> getNode(int index){
+        int mid = size / 2;
         int pos = 0;
-        final Node<T> addedNode = new Node<T>(element, null, null);
+        Node<T> currentNode;
         if (index <= mid) {
-            Node<T> currentNode = this.head;
+            currentNode = this.head;
             while (pos < index) {
                 currentNode = currentNode.getNext();
                 pos++;
             }
-            if (pos == 0) {
-                addedNode.setNext(this.head);
-                this.head = addedNode;
-            } else {
-                addedNode.setPrior(currentNode.getPrior());
-                currentNode.setPrior(addedNode);
-                addedNode.setNext(currentNode);
-            }
-
         }else{
-            while(pos>index){
-                Node<T> currentNode = this.tail;                
+            currentNode = this.tail;
+            while(pos > index){
+                currentNode = currentNode.getPrior();
+                pos--;
             }
-
         }
-
+        return currentNode;
     }
 
-    public boolean addAll(final Collection<? extends T> c) {
+    public void add(int index, T element) {
+        Node<T> addedNode = new Node<T>(element, null, null);
+        Node<T> currentNode = getNode(index);
+        if( currentNode.getPrior() != null){
+            Node<T> priorCurrentNode = currentNode.getPrior();
+            priorCurrentNode.setNext(addedNode);
+            addedNode.setPrior(priorCurrentNode);
+        }
+        currentNode.setPrior(addedNode);
+        addedNode.setNext(currentNode);
+    }
+
+    public boolean addAll( Collection<? extends T> c) {
         // TODO Auto-generated method stub
         return false;
     }
 
-    public boolean addAll(final int index, final Collection<? extends T> c) {
+    public boolean addAll( int index,  Collection<? extends T> c) {
         // TODO Auto-generated method stub
         return false;
     }
 
     public void clear() {
-        // TODO Auto-generated method stub
+        
 
     }
 
-    public boolean contains(final Object o) {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-    public boolean containsAll(final Collection<?> c) {
+    public boolean contains( Object o) {
         // TODO Auto-generated method stub
         return false;
     }
 
-    public T get(final int index) {
+    public boolean containsAll( Collection<?> c) {
         // TODO Auto-generated method stub
-        return null;
+        return false;
     }
 
-    public int indexOf(final Object o) {
+    public T get( int index) {
+        Node<T> currentNode = getNode(index);
+        T element = currentNode.getElement();
+        return element;
+    }
+
+    public int indexOf( Object o) {
         // TODO Auto-generated method stub
         return 0;
     }
 
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        return false;
+        
+        return size == 0;
     }
 
     public Iterator<T> iterator() {
@@ -116,7 +121,7 @@ public class LinkedList<T> implements List<T> {
         return null;
     }
 
-    public int lastIndexOf(final Object o) {
+    public int lastIndexOf( Object o) {
         // TODO Auto-generated method stub
         return 0;
     }
@@ -126,34 +131,36 @@ public class LinkedList<T> implements List<T> {
         return null;
     }
 
-    public ListIterator<T> listIterator(final int index) {
+    public ListIterator<T> listIterator( int index) {
         // TODO Auto-generated method stub
         return null;
     }
 
-    public boolean remove(final Object o) {
+    public boolean remove( Object o) {
         // TODO Auto-generated method stub
         return false;
     }
 
-    public T remove(final int index) {
+    public T remove( int index) {
         // TODO Auto-generated method stub
         return null;
     }
 
-    public boolean removeAll(final Collection<?> c) {
+    public boolean removeAll( Collection<?> c) {
         // TODO Auto-generated method stub
         return false;
     }
 
-    public boolean retainAll(final Collection<?> c) {
+    public boolean retainAll( Collection<?> c) {
         // TODO Auto-generated method stub
         return false;
     }
 
-    public T set(final int index, final T element) {
-        // TODO Auto-generated method stub
-        return null;
+    public T set( int index,  T element) {
+        Node<T> currentNode = getNode(index);
+        T currenElement = currentNode.getElement();
+        currentNode.setElement(element);
+        return currenElement;
     }
 
     public int size() {
@@ -161,7 +168,7 @@ public class LinkedList<T> implements List<T> {
         return 0;
     }
 
-    public List<T> subList(final int fromIndex, final int toIndex) {
+    public List<T> subList( int fromIndex,  int toIndex) {
         // TODO Auto-generated method stub
         return null;
     }
@@ -171,7 +178,7 @@ public class LinkedList<T> implements List<T> {
         return null;
     }
 
-    public <T> T[] toArray(final T[] a) {
+    public <T> T[] toArray( T[] a) {
         // TODO Auto-generated method stub
         return null;
     }    
