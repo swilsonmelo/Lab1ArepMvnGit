@@ -73,6 +73,7 @@ public class LinkedList<T> implements List<T> {
         }
         currentNode.setPrior(addedNode);
         addedNode.setNext(currentNode);
+        size++;
     }
 
     public boolean addAll( Collection<? extends T> c) {
@@ -165,7 +166,7 @@ public class LinkedList<T> implements List<T> {
 
     public int size() {
         // TODO Auto-generated method stub
-        return 0;
+        return size;
     }
 
     public List<T> subList( int fromIndex,  int toIndex) {
