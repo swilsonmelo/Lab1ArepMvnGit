@@ -133,6 +133,21 @@ public class LinkedList<T> {
         }
     }
 
+
+    public boolean remove(T element){
+        Node<T> currentNode = this.head;
+        int pos = 0;
+        while(currentNode != null){
+            if(currentNode.getElement().equals(element)){
+                remove(pos);
+                return true;
+            }
+            currentNode = currentNode.getNext();
+            pos++;
+        }
+        return false;
+    }
+
     public void clear() {
 
     }
