@@ -1,4 +1,4 @@
-package edu.escuelaing.arep.ASE.app;
+package edu.escuelaing.arep.ASE.app.utilities;
 
 public class Node<T> {
     private T element;
