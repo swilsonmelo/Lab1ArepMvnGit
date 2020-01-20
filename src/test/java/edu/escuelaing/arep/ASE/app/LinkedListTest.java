@@ -101,4 +101,44 @@ public class LinkedListTest<T> extends TestCase {
         assertTrue(flag);
     }
 
+    public void testRemoveMiddleElementWithIndexLinkedList() {
+        Double[] data = { 0.1, 1.0, 2.2, 3.3, 3.1416, 10.0 };
+        LinkedList lkl = new LinkedList<T>();
+        for (Double element : data) {
+            lkl.add(element);
+        }
+        int eliminatedIndex = 2;
+        lkl.remove(eliminatedIndex);
+        boolean flag = true;
+        for (int i = 0; i < lkl.size(); i++) {
+            Node<T> currentNode = lkl.getNode(i);
+            // System.out.print(currentNode + " ");
+            if (i >= eliminatedIndex) {
+                flag &= currentNode.getElement().equals(data[i + 1]);
+                // System.out.println(data[i+1]);
+            } else {
+                flag &= currentNode.getElement().equals(data[i]);
+                // System.out.println(data[i]);
+            }
+        }
+        assertTrue(flag);
+    }
+
+
+    public void testRemoveHeadLinkedList(){
+        Double[] data = { 0.1, 1.0, 2.2, 3.3, 3.1416, 10.0 };
+        LinkedList lkl = new LinkedList<T>();
+        for (Double element : data) {            
+            lkl.add(element);
+        }
+        lkl.removeHead();
+        boolean flag = true;
+        for(int i = 0; i < lkl.size(); i++){
+            Node<T> currentNode = lkl.getNode(i);
+            //System.out.println(currentNode + " " + data[i+1]);
+            flag &= currentNode.getElement().equals(data[i+1]);
+        }
+        assertTrue(flag);
+    }
+
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="edu.escuelaing.arep.ASE.app.LinkedListTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="edu.escuelaing.arep.ASE.app.LinkedListTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
@@ -66,7 +66,9 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="edu.escuelaing.arep.ASE.app.LinkedListTest" name="testAddGetNodeAndTheOrderLinkedList" time="0"/>
-  <testcase classname="edu.escuelaing.arep.ASE.app.LinkedListTest" name="testAddAndGetDataWithIndexLinkedList" time="0.001"/>
+  <testcase classname="edu.escuelaing.arep.ASE.app.LinkedListTest" name="testAddAndGetDataWithIndexLinkedList" time="0"/>
+  <testcase classname="edu.escuelaing.arep.ASE.app.LinkedListTest" name="testRemoveMiddleElementWithIndexLinkedList" time="0"/>
+  <testcase classname="edu.escuelaing.arep.ASE.app.LinkedListTest" name="testRemoveHeadLinkedList" time="0"/>
   <testcase classname="edu.escuelaing.arep.ASE.app.LinkedListTest" name="testAddAndGetDataLinkedList" time="0"/>
   <testcase classname="edu.escuelaing.arep.ASE.app.LinkedListTest" name="testCreateAEmptyLinkedList" time="0"/>
   <testcase classname="edu.escuelaing.arep.ASE.app.LinkedListTest" name="testCreateALinkedListWithData" time="0"/>

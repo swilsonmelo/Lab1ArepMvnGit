@@ -1,11 +1,6 @@
 package edu.escuelaing.arep.ASE.app.utilities;
 
-import java.util.AbstractSequentialList;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 /**
  *
@@ -41,6 +36,27 @@ public class LinkedList<T> {
         return true;
     }
 
+    public void add(int index, T element) {
+        Node<T> addedNode = new Node<T>(element, null, null);
+        Node<T> currentNode = getNode(index);
+        if (currentNode.getPrior() != null) {
+            Node<T> priorCurrentNode = currentNode.getPrior();
+            priorCurrentNode.setNext(addedNode);
+            addedNode.setPrior(priorCurrentNode);
+        }
+        currentNode.setPrior(addedNode);
+        addedNode.setNext(currentNode);
+        if (index == 0)
+            this.head = addedNode;
+        size++;
+    }
+
+    public T get(int index) {
+        Node<T> currentNode = getNode(index);
+        T element = currentNode.getElement();
+        return element;
+    }
+
     public Node<T> getNode(int index) {
         int mid = size / 2;
         int pos;
@@ -63,28 +79,7 @@ public class LinkedList<T> {
         }
         return currentNode;
     }
-
-    public void add(int index, T element) {
-        Node<T> addedNode = new Node<T>(element, null, null);
-        Node<T> currentNode = getNode(index);
-        if (currentNode.getPrior() != null) {
-            Node<T> priorCurrentNode = currentNode.getPrior();
-            priorCurrentNode.setNext(addedNode);
-            addedNode.setPrior(priorCurrentNode);
-        }
-        currentNode.setPrior(addedNode);
-        addedNode.setNext(currentNode);
-        if (index == 0)
-            this.head = addedNode;
-        size++;
-    }
-
-    public T get(int index) {
-        Node<T> currentNode = getNode(index);
-        T element = currentNode.getElement();
-        return element;
-    }
-
+    
     public T set(int index, T element) {
         Node<T> currentNode = getNode(index);
         T currenElement = currentNode.getElement();
@@ -100,9 +95,42 @@ public class LinkedList<T> {
         return size == 0;
     }
 
-    public T remove(int index) {
-        // TODO Auto-generated method stub
-        return null;
+    public void removeTail() {
+        if (size == 1) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            Node<T> priorTailNode = this.tail.getPrior();
+            priorTailNode.setNext(null);
+            this.tail = priorTailNode;
+        }
+        size--;
+    }
+
+    public void removeHead() {
+        if (size == 1) {
+            removeTail();
+        } else {
+            Node<T> nextHeadNode = this.head.getNext();
+            nextHeadNode.setPrior(null);
+            this.head = nextHeadNode;
+        }
+        size--;
+    }
+
+    public void remove(int index) {
+        if (index == 0)
+            removeHead();
+        else if (index == size - 1)
+            removeTail();
+        else {
+            Node<T> currentNode = getNode(index);
+            Node<T> priorCurrentNode = currentNode.getPrior();
+            Node<T> nextCurrentNode = currentNode.getNext();
+            priorCurrentNode.setNext(nextCurrentNode);
+            nextCurrentNode.setPrior(priorCurrentNode);
+            size--;
+        }
     }
 
     public void clear() {
