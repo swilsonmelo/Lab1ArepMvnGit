@@ -24,12 +24,11 @@ public class LinkedList<T> implements List<T> {
 
     public LinkedList( T data) {
         this.head = new Node<T>(data, null, null);
-        this.tail = new Node<T>(data, null, null);
+        this.tail = this.head;
         this.size = 1;
     }
 
     public boolean add( T data) {
-
         if (size == 0) {
              Node<T> addedNode = new Node<T>(data, null, null);
             this.head = addedNode;
