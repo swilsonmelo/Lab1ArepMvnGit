@@ -1,13 +1,11 @@
 package edu.escuelaing.arep.ASE.app;
 
-
-public class Node<T>
-{
+public class Node<T> {
     private T element;
     private Node<T> next;
     private Node<T> prior;
 
-    public Node(T element, Node<T> prior, Node<T> next){
+    public Node(T element, Node<T> prior, Node<T> next) {
         this.element = element;
         this.next = next;
         this.prior = prior;
@@ -39,6 +37,11 @@ public class Node<T>
 
     @Override
     public String toString() {
-        return "Node [element=" + element + ", next=" + next + ", prior=" + prior + "]";
+        return "Node [element=" + element.toString() + ", prior=" + ((prior != null) ? prior.getElement() : "None")
+                + ", next=" + ((next != null) ? next.getElement() : "None") + "]";
+    }
+
+    public boolean equals(Node<T> node) {
+        return this.element.equals(node.getElement());
     }
 }
