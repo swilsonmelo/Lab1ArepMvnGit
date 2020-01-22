@@ -67,7 +67,7 @@
   </properties>
   <testcase classname="edu.escuelaing.arep.ASE.app.NodeTest" name="testApp" time="0"/>
   <testcase classname="edu.escuelaing.arep.ASE.app.NodeTest" name="testEquals" time="0"/>
-  <testcase classname="edu.escuelaing.arep.ASE.app.NodeTest" name="testCreateNodeAndGetElement" time="0"/>
   <testcase classname="edu.escuelaing.arep.ASE.app.NodeTest" name="testGetNextAndSetNext" time="0"/>
   <testcase classname="edu.escuelaing.arep.ASE.app.NodeTest" name="testGetPriorAndSetPrior" time="0"/>
+  <testcase classname="edu.escuelaing.arep.ASE.app.NodeTest" name="testCreateNodeAndGetElement" time="0"/>
 </testsuite>
