@@ -21,9 +21,15 @@ Generate documentation
 
     mvn javadoc:jar
 
+## Built With
+
+* [Maven](https://maven.apache.org/) - Dependency Management
+
 ## Author
-Willson Sneitder Melo Merchan- Escuela Colombiana de Ingeniería Julio Garavito
+
+* **Willson Sneitder Melo Merchan** - Escuela Colombiana de Ingeniería Julio Garavito
 
 ## License
-This project is under GNU General Public License - see [LICENSE](https://github.com/swilsonmelo/Lab1ArepMvnGit/blob/master/LICENSE) to more info.
+
+* This project is under GNU General Public License - see [LICENSE](https://github.com/swilsonmelo/Lab1ArepMvnGit/blob/master/LICENSE) to more info.
 

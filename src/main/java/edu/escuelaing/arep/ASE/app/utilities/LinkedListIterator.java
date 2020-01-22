@@ -2,6 +2,14 @@ package edu.escuelaing.arep.ASE.app.utilities;
 
 import java.util.Iterator;
 
+
+/**
+ * 
+ * LinkedListIterator Class
+ * @author Willson Melo
+ *
+ * @param <T>
+ */
 public class LinkedListIterator<T> implements Iterator<T> {
 
     Node<T> current;

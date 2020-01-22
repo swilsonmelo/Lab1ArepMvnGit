@@ -3,8 +3,11 @@ package edu.escuelaing.arep.ASE.app.utilities;
 import java.util.Iterator;
 
 /**
+ * 
+ * LinkedList Class
+ * @author Willson Melo
  *
- *
+ * @param <T>
  */
 public class LinkedList<T> implements Iterable<T> {
 

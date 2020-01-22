@@ -13,8 +13,8 @@ import java.util.Iterator;
 import edu.escuelaing.arep.ASE.app.utilities.LinkedList;
 
 /**
- * Hello world!
- *
+ * App Class
+ * @author Willson Melo
  */
 public class App {
     public static void main(String[] args) throws Exception
@@ -38,6 +38,12 @@ public class App {
         System.out.println("Standard Deviation Test Case 2: " + formatter.format(standarDev2));        
     }
 
+    /**
+     * 
+     * @param testCasePath the path of the test case
+     * @return lkl LinkedList with the data obtained from the test case
+     * @throws Exception
+     */
     public static LinkedList<Double> makeLklWithTestCase(String testCasePath) throws Exception {
         LinkedList<Double> lkl = new LinkedList<Double>();
         File file = new File(testCasePath);
@@ -54,6 +60,11 @@ public class App {
         return lkl;
     }
 
+     /**
+     * Method that calculates LinkedList's mean
+     * @param lkl LinkedList
+     * @return res Mean value
+     */
     public static Double mean(LinkedList<Double> lkl) {
         Double sum = 0.0;
         Iterator<Double> iterator = lkl.iterator();
@@ -68,6 +79,11 @@ public class App {
         return res;
     }
 
+    /**
+     * Method that calculates LinkedList's standard deviation
+     * @param lkl LinkedList
+     * @return res as Standard deviation value
+     */
     public static Double standardDeviation(LinkedList<Double> lkl){
         Double mean = mean(lkl);
         Double sum = 0.0;

@@ -1,5 +1,15 @@
 package edu.escuelaing.arep.ASE.app.utilities;
 
+
+
+/**
+ * 
+ * Node Class
+ * @author Willson Melo
+ *
+ * @param <T>
+ */
+
 public class Node<T> {
     private T element;
     private Node<T> next;
