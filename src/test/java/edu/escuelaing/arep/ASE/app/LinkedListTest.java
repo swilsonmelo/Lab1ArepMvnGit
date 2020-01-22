@@ -1,6 +1,9 @@
 package edu.escuelaing.arep.ASE.app;
 
+import java.util.Iterator;
+
 import edu.escuelaing.arep.ASE.app.utilities.LinkedList;
+import edu.escuelaing.arep.ASE.app.utilities.LinkedListIterator;
 import edu.escuelaing.arep.ASE.app.utilities.Node;
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -161,6 +164,22 @@ public class LinkedListTest<T> extends TestCase {
             }
         }
         assertTrue(flag);
+    }
+
+    public void testIteratorHasNext(){
+        Double data = 5.0;
+        LinkedList<T> lkl = new LinkedList<T>((T) data);
+        Iterator iterator = lkl.iterator();
+        assertTrue(iterator.hasNext());
+    }
+
+    public void testIteratorNext(){
+        Double data = 5.0;
+        LinkedList<T> lkl = new LinkedList<T>((T) data);
+        Iterator<T> iterator = lkl.iterator();
+        T nextData = iterator.next();
+        //System.out.println(nextData);
+        assertTrue(data.equals(nextData));
     }
 
 }

@@ -6,7 +6,7 @@ import java.util.Iterator;
  *
  *
  */
-public class LinkedList<T> {
+public class LinkedList<T> implements Iterable<T> {
 
     private Node<T> head;
     private Node<T> tail;
@@ -55,6 +55,14 @@ public class LinkedList<T> {
         Node<T> currentNode = getNode(index);
         T element = currentNode.getElement();
         return element;
+    }
+
+    public Node<T> getHead(){
+        return this.head;
+    }
+
+    public Node<T> getTail(){
+        return this.tail;
     }
 
     public Node<T> getNode(int index) {
@@ -114,8 +122,8 @@ public class LinkedList<T> {
             Node<T> nextHeadNode = this.head.getNext();
             nextHeadNode.setPrior(null);
             this.head = nextHeadNode;
-        }
-        size--;
+            size--;
+        }        
     }
 
     public void remove(int index) {
@@ -152,9 +160,8 @@ public class LinkedList<T> {
 
     }
 
-    public Iterator<T> iterator() {
-        // TODO Auto-generated method stub
-        return null;
+    public Iterator<T> iterator() {        
+        return new LinkedListIterator<T>(this);
     }
 
 }
