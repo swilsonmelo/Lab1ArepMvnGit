@@ -33,15 +33,15 @@ In the laboratory we have two test cases and the expected value of the mean and 
 
 Cases:
 
-![DLL](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL1.png)
+![DLL](https://github.com/swilsonmelo/Lab1ArepMvnGit/blob/master/resources/img/testCases.PNG)
 
 Expected values:
 
-![DLL](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL1.png)
+![DLL](https://github.com/swilsonmelo/Lab1ArepMvnGit/blob/master/resources/img/expectedResutls.PNG)
 
 Obtained values:
 
-![DLL](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL1.png)
+![DLL](https://github.com/swilsonmelo/Lab1ArepMvnGit/blob/master/resources/img/results.PNG)
 
 We can see that the values obtained and those expected are the same, we can affirm that both the calculation of the mean and the calculation of the standard deviation are being done correctly.
 
