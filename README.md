@@ -10,6 +10,8 @@ A Double Linked List (DLL) contains an extra pointer, typically called previous 
 
 ![DLL](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL1.png)
 
+Image taken from [GeeksforGeeks](https://www.geeksforgeeks.org/doubly-linked-list/)
+
 These LinkedList can store any type of Object and do operations like:
 
 - Add an item at the end.
