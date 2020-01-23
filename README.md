@@ -65,7 +65,7 @@ In order to obtain the documentation of the project, you must execute the comman
 
     mvn javadoc:jar
 
-An HTML documentation will be generated in /target/site/apidocs/index.html
+An HTML documentation will be generated in /target/site/apidocs/index.html.
 
 ## Built With
 
