@@ -4,11 +4,11 @@
 
 This project provides characteristics for calculating the mean and standard deviation in a data group.
 
-I used my own implementation of a double LinkedList to store the data.
+I used my own implementation of a doubly LinkedList to store the data.
 
 ## LinkedList
 
-A Double Linked List (DLL) contains an extra pointer, typically called previous pointer, together with next pointer and data which are there in singly linked list.
+A Doubly Linked List (DLL) contains an extra pointer, typically called previous pointer, together with next pointer and data which are there in singly linked list.
 
 ![DLL](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL1.png)
 
