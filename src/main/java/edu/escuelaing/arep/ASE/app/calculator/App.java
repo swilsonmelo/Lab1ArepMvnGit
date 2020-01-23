@@ -39,9 +39,9 @@ public class App {
     }
 
     /**
-     * 
+     * Creates a linkedList with the data obtained from the test case
      * @param testCasePath the path of the test case
-     * @return lkl LinkedList with the data obtained from the test case
+     * @return LinkedList with the data obtained from the test case
      * @throws Exception
      */
     public static LinkedList<Double> makeLklWithTestCase(String testCasePath) throws Exception {
@@ -62,8 +62,8 @@ public class App {
 
      /**
      * Method that calculates LinkedList's mean
-     * @param lkl LinkedList
-     * @return res Mean value
+     * @param lkl LinkedList with the data
+     * @return Mean value of the linkedList
      */
     public static Double mean(LinkedList<Double> lkl) {
         Double sum = 0.0;
@@ -81,8 +81,8 @@ public class App {
 
     /**
      * Method that calculates LinkedList's standard deviation
-     * @param lkl LinkedList
-     * @return res as Standard deviation value
+     * @param lkl LinkedList with the data
+     * @return Standard deviation value of the linkedList
      */
     public static Double standardDeviation(LinkedList<Double> lkl){
         Double mean = mean(lkl);
