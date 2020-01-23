@@ -33,15 +33,15 @@ In the laboratory we have two test cases and the expected value of the mean and 
 
 Cases:
 
-![DLL](https://github.com/swilsonmelo/Lab1ArepMvnGit/blob/master/resources/img/testCases.PNG)
+![testCases](https://github.com/swilsonmelo/Lab1ArepMvnGit/blob/master/resources/img/testCases.PNG)
 
 Expected values:
 
-![DLL](https://github.com/swilsonmelo/Lab1ArepMvnGit/blob/master/resources/img/expectedResutls.PNG)
+![expectedResutls](https://github.com/swilsonmelo/Lab1ArepMvnGit/blob/master/resources/img/expectedResutls.PNG)
 
 Obtained values:
 
-![DLL](https://github.com/swilsonmelo/Lab1ArepMvnGit/blob/master/resources/img/results.PNG)
+![results](https://github.com/swilsonmelo/Lab1ArepMvnGit/blob/master/resources/img/results.PNG)
 
 We can see that the values obtained and those expected are the same, we can affirm that both the calculation of the mean and the calculation of the standard deviation are being done correctly.
 
@@ -61,7 +61,11 @@ To run the whole project.
 
 Generate documentation.
 
+In order to obtain the documentation of the project, you must execute the command:
+
     mvn javadoc:jar
+
+An HTML documentation will be generated in /target/site/apidocs/index.html
 
 ## Built With
 
