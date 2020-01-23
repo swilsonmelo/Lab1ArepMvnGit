@@ -36,17 +36,17 @@ To run the whole project.
 
     mvn exec:java -D "exec.mainClass"="edu.escuelaing.arep.ASE.app.calculator.App"
 
-Generate documentation
+Generate documentation.
 
     mvn javadoc:jar
 
 ## Built With
 
-* [Maven](https://maven.apache.org/) - Dependency Management
+* [Maven](https://maven.apache.org/) - Dependency Management.
 
 ## Author
 
-* **Willson Sneitder Melo Merchan** - Escuela Colombiana de Ingeniería Julio Garavito
+* **Willson Sneitder Melo Merchan** - Escuela Colombiana de Ingeniería Julio Garavito.
 
 ## License
 
